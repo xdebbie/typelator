@@ -2,7 +2,7 @@
 
 React & Typescript calculator
 
-Click here to use it 👉🏻 [http://localhost:3000](http://localhost:3000)
+Click here to use it 👉🏻 [typelator.vercel.app](http://typelator.vercel.app)
 
 <br> 
 

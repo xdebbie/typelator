@@ -35,9 +35,12 @@ const Main = styled.div`
     color: white;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     min-height: 100vh;
     transition: all 2s;
+
+    @media ${device.tablet} {
+        justify-content: center;
+    }
 `
 
 const Wrapper = styled.div`
@@ -53,6 +56,7 @@ const Themes = styled.div`
     font-weight: 200;
     line-height: 40px;
     margin-bottom: 20px;
+    margin-top: 50px;
     padding: 0 20px 10px 20px;
     text-align: center;
     user-select: none;
@@ -60,6 +64,7 @@ const Themes = styled.div`
 
     @media ${device.tablet} {
         font-size: 20px;
+        margin-top: 0;
         padding: 10px 20px 20px 20px;
         width: unset;
     }

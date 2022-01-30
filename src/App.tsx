@@ -3,6 +3,7 @@ import styled, { ThemeProvider } from 'styled-components'
 import theme from 'styled-theming'
 import { useTheme } from './utils/ThemeManager'
 import Calculator, { themes } from './components/Calculator'
+import Footer from './components/Footer'
 import { device } from './utils/variables'
 import brush from './assets/brush.svg'
 
@@ -44,6 +45,8 @@ const Main = styled.div`
 `
 
 const Wrapper = styled.div`
+    flex: 1 0 auto;
+    margin-top: 50px;
     position: relative;
 `
 
@@ -56,7 +59,6 @@ const Themes = styled.div`
     font-weight: 200;
     line-height: 40px;
     margin-bottom: 20px;
-    margin-top: 50px;
     padding: 0 10px 10px 10px;
     text-align: center;
     user-select: none;
@@ -64,7 +66,6 @@ const Themes = styled.div`
 
     @media ${device.tablet} {
         font-size: 20px;
-        margin-top: 0;
         padding: 10px 20px 20px 20px;
         width: unset;
     }
@@ -152,6 +153,7 @@ function App() {
                         </Themes>
                     </Calculator>
                 </Wrapper>
+                <Footer />
             </Main>
         </ThemeProvider>
     )

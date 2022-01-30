@@ -101,9 +101,6 @@ const Button = styled.button`
     font-weight: 300;
     margin-left: 5px;
     margin-top: 10px;
-    outline: none;
-    -moz-outline: none;
-    -webkit-outline: none;
     padding: 10px;
 
     &:hover {
@@ -113,8 +110,6 @@ const Button = styled.button`
     &:focus,
     &:active {
         outline: none;
-        -moz-outline: none;
-        -webkit-outline: none;
     }
 
     @media ${device.tablet} {

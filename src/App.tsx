@@ -107,8 +107,11 @@ const Button = styled.button`
         background: ${themes.displayColour};
     }
 
-    &:focus {
+    &:focus,
+    &:active {
         outline: none;
+        -moz-outline: none;
+        -webkit-outline: none;
     }
 
     @media ${device.tablet} {

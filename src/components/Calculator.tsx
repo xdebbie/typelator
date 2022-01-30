@@ -134,6 +134,9 @@ const Button = styled.button`
     font-family: 'Outfit', sans-serif;
     font-size: 28px;
     font-weight: 300;
+    outline: none;
+    -moz-outline: none;
+    -webkit-outline: none;
     text-transform: uppercase;
 
     &:hover {
@@ -142,9 +145,6 @@ const Button = styled.button`
 
     &:focus,
     &:active {
-        box-shadow: none;
-        -moz-box-shadow: none;
-        -webkit-box-shadow: none;
         outline: none;
         -moz-outline: none;
         -webkit-outline: none;

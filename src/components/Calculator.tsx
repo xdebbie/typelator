@@ -140,7 +140,8 @@ const Button = styled.button`
         background: ${themes.displayColour};
     }
 
-    &:focus {
+    &:focus,
+    &:active {
         outline: none;
     }
 

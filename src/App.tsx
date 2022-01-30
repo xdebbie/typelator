@@ -57,10 +57,10 @@ const Themes = styled.div`
     line-height: 40px;
     margin-bottom: 20px;
     margin-top: 50px;
-    padding: 0 20px 10px 20px;
+    padding: 0 10px 10px 10px;
     text-align: center;
     user-select: none;
-    width: 270px;
+    width: 290px;
 
     @media ${device.tablet} {
         font-size: 20px;

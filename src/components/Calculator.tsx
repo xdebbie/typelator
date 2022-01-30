@@ -95,6 +95,7 @@ const History = styled.input`
     font-family: 'Outfit', sans-serif;
     font-size: 26px;
     line-height: 32px;
+    padding: 0;
     text-align: right;
     width: inherit;
 `
@@ -106,6 +107,7 @@ const Result = styled.input`
     font-family: 'Outfit', sans-serif;
     font-size: 44px;
     line-height: 54px;
+    padding: 0;
     text-align: right;
     width: inherit;
 `
@@ -134,6 +136,7 @@ const Button = styled.button`
     font-family: 'Outfit', sans-serif;
     font-size: 28px;
     font-weight: 300;
+    padding: 0;
     text-transform: uppercase;
 
     &:hover {

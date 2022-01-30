@@ -142,6 +142,9 @@ const Button = styled.button`
 
     &:focus,
     &:active {
+        box-shadow: none;
+        -moz-box-shadow: none;
+        -webkit-box-shadow: none;
         outline: none;
         -moz-outline: none;
         -webkit-outline: none;

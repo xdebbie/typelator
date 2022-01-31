@@ -92,6 +92,7 @@ const History = styled.input`
     background: none;
     border: none;
     color: ${themes.historyColour};
+    -webkit-text-fill-color: ${themes.historyColour};
     font-family: 'Outfit', sans-serif;
     font-size: 26px;
     line-height: 32px;
@@ -104,6 +105,7 @@ const Result = styled.input`
     background: none;
     border: none;
     color: ${themes.resultColour};
+    -webkit-text-fill-color: ${themes.resultColour};
     font-family: 'Outfit', sans-serif;
     font-size: 44px;
     line-height: 54px;

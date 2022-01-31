@@ -4,6 +4,8 @@ React & Typescript calculator
 
 Click here to use it 👉🏻 [typelator.vercel.app](http://typelator.vercel.app)
 
+![Typelator](https://i.imgur.com/VaQhL3V.png)
+
 <br> 
 
 ## Features
@@ -11,7 +13,7 @@ Click here to use it 👉🏻 [typelator.vercel.app](http://typelator.vercel.app
 ### ✨ Basic operations
 This calculator can perform all 4 basic operations: addition, subtraction, multiplication and division
 ### ✨ Keyboard input
-You can either press the buttons or use your keyboard to perform operations. Supports all numbers and the following keys: `Esc`,`.`, `x`, `/`, `+`, `-` and `=`
+You can either press the buttons or use your keyboard to perform operations. Supports all numbers and the following keys: `Esc`,`.`, `x` or `*`, `/`, `+`, `-` and `=`
 ### ✨ Themes
 Four themes to choose from: white, lollipop, dark and forest
 ### ✨ Mobile & tablet friendly

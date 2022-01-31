@@ -236,7 +236,8 @@ export const calcExpression = (expression: string) => {
         return result
     } catch (err) {
         console.error(err)
-        return undefined
+        const result = 'syntax error'!
+        return result
     }
 }
 

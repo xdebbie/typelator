@@ -207,7 +207,7 @@ const Tooltip = styled.div`
                 visibility: visible;
             }
         }
-    } ;
+    }
 `
 
 export const calcExpression = (expression: string) => {

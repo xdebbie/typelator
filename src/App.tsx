@@ -20,8 +20,8 @@ const backgroundColour = theme('mode', {
     )`,
     dark: `linear-gradient(
         243.18deg,
-        #041521 0%,
-        rgba(0, 19, 33, 0.92) 100%
+        #000000 0%,
+        rgba(48, 48, 48, 0.92) 100%
     )`,
     forest: `linear-gradient(
         243.18deg,
@@ -91,6 +91,7 @@ const Icon = styled.img`
     @media ${device.desktop} {
         height: 40px;
         margin-bottom: 0;
+        margin-top: 10px;
         width: 100%;
     }
 `

@@ -91,6 +91,7 @@ const Icon = styled.img`
     @media ${device.desktop} {
         height: 40px;
         margin-bottom: 0;
+        margin-top: 10px;
         width: 100%;
     }
 `

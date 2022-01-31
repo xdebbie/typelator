@@ -43,11 +43,16 @@ const Main = styled.div`
         justify-content: center;
     }
 `
-
 const Wrapper = styled.div`
     flex: 1 0 auto;
     margin-top: 50px;
     position: relative;
+
+    @media ${device.tablet} {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
 `
 
 const Themes = styled.div`
@@ -74,6 +79,7 @@ const Themes = styled.div`
         display: flex;
         flex-direction: column;
         left: -170px;
+        margin-top: -465px;
         margin-bottom: 0;
         position: absolute;
     }

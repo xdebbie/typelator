@@ -56,6 +56,7 @@ const Frame = styled.div`
     border-radius: 25px;
     box-shadow: 8px 8px 40px 15px rgba(46, 46, 46, 0.15);
     padding: 20px 20px 20px 20px;
+    position: relative;
 
     @media ${device.tablet} {
         padding: 20px 25px 25px 25px;
@@ -449,17 +450,17 @@ const Calculator: React.FC = ({ children }) => {
                         .
                     </Button>
                 </Grid>
+                <Tooltip>
+                    ?
+                    <span className="tooltip__text">
+                        You can use your keyboard to calculate expressions.
+                        Allowed inputs are all numerical keys, <code>.</code>,{' '}
+                        <code>/</code>, <code>x</code>, <code>*</code>,{' '}
+                        <code>-</code>, <code>+</code>, <code>{'='}</code>, and{' '}
+                        <code>Esc</code> to clear.
+                    </span>
+                </Tooltip>
             </Frame>
-            <Tooltip>
-                ?
-                <span className="tooltip__text">
-                    You can use your keyboard to calculate expressions. Allowed
-                    inputs are all numerical keys, <code>.</code>,{' '}
-                    <code>/</code>, <code>x</code>, <code>*</code>,{' '}
-                    <code>-</code>, <code>+</code>, <code>{'='}</code>, and{' '}
-                    <code>Esc</code> to clear.
-                </span>
-            </Tooltip>
         </ThemeProvider>
     )
 }

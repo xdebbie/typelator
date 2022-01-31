@@ -10,7 +10,7 @@ export const themes = {
     frameColour: theme('mode', {
         white: 'rgba(255, 255, 255, 0.15)',
         lollipop: 'rgba(87, 87, 87, 0.35)',
-        dark: 'rgba(255, 255, 255, 0.25)',
+        dark: 'rgba(0, 0, 0, 0.151)',
         forest: 'rgba(255, 255, 255, 0.25)',
     }),
     labelColour: theme('mode', {
@@ -22,7 +22,7 @@ export const themes = {
     displayColour: theme('mode', {
         white: 'rgba(255, 255, 255, 0.75)',
         lollipop: 'rgba(255, 255, 255, 0.65)',
-        dark: 'rgba(27, 27, 27, 0.75)',
+        dark: 'rgba(36, 36, 36, 0.75)',
         forest: 'rgba(0, 36, 10, 0.75)',
     }),
     historyColour: theme('mode', {

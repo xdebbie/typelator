@@ -1,7 +1,6 @@
 import React from 'react'
 import styled, { ThemeProvider } from 'styled-components'
 import { useTheme } from '../utils/ThemeManager'
-import { themes } from '../components/Calculator'
 import { ReactComponent as Github } from '../assets/github.svg'
 import { ReactComponent as Medium } from '../assets/medium.svg'
 import { ReactComponent as Twitter } from '../assets/twitter.svg'
@@ -22,14 +21,14 @@ const Links = styled.div`
     .github,
     .twitter,
     .medium {
-        fill: ${themes.buttonColour};
+        fill: rgba(239, 239, 239, 0.75);
         height: 25px;
         margin-right: 5px;
         transition: 300ms all ease;
         width: 25px;
 
         &:hover {
-            fill: ${themes.displayColour};
+            fill: white;
         }
     }
 `

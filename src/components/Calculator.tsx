@@ -331,13 +331,14 @@ const Calculator: React.FC = ({ children }) => {
                     />
                 </Display>
                 <Grid>
-                    <Button id="clear" onClick={clearValue}>
+                    <Button id="clear" data-testid="clear" onClick={clearValue}>
                         Clear
                     </Button>
                     <Button
                         onClick={() => {
                             setValue(value.concat('÷'))
                         }}
+                        data-testid="/"
                     >
                         /
                     </Button>
@@ -345,6 +346,7 @@ const Calculator: React.FC = ({ children }) => {
                         onClick={() => {
                             setValue(value.concat('×'))
                         }}
+                        data-testid="x"
                     >
                         x
                     </Button>
@@ -373,6 +375,7 @@ const Calculator: React.FC = ({ children }) => {
                         onClick={() => {
                             setValue(value.concat('-'))
                         }}
+                        data-testid="-"
                     >
                         -
                     </Button>
@@ -401,6 +404,7 @@ const Calculator: React.FC = ({ children }) => {
                         onClick={() => {
                             setValue(value.concat('+'))
                         }}
+                        data-testid="+"
                     >
                         +
                     </Button>
@@ -425,7 +429,7 @@ const Calculator: React.FC = ({ children }) => {
                     >
                         3
                     </Button>
-                    <Button id="equals" onClick={calculate}>
+                    <Button id="equals" data-testid="=" onClick={calculate}>
                         {'='}
                     </Button>
                     <Button
@@ -440,6 +444,7 @@ const Calculator: React.FC = ({ children }) => {
                         onClick={() => {
                             setValue(value.concat('.'))
                         }}
+                        data-testid="."
                     >
                         .
                     </Button>

@@ -170,6 +170,46 @@ const Button = styled.button`
     }
 `
 
+const Tooltip = styled.div`
+    display: none;
+
+    @media ${device.desktop} {
+        background: ${themes.frameColour};
+        border-radius: 100px;
+        bottom: 0;
+        display: inline-block;
+        left: -40px;
+        padding: 5px 12px;
+        position: absolute;
+
+        .tooltip__text {
+            background-color: ${themes.resultColour};
+            border-radius: 15px;
+            bottom: 0;
+            color: ${themes.displayColour};
+            padding: 5px 10px;
+            position: absolute;
+            right: 40px;
+            text-align: center;
+            visibility: hidden;
+            width: 210px;
+            z-index: 1;
+
+            code {
+                background-color: rgba(0, 0, 0, 0.05);
+                color: ${themes.displayColour};
+                padding: 0 3px;
+            }
+        }
+
+        &:hover  {
+            .tooltip__text {
+                visibility: visible;
+            }
+        }
+    }
+`
+
 export const calcExpression = (expression: string) => {
     const mulRegex = /×/g
     const divRegex = /÷/g
@@ -229,7 +269,7 @@ const Calculator: React.FC = ({ children }) => {
                 calculate()
             } else if (key === '/') {
                 setInputValue('÷')
-            } else if (key === 'x') {
+            } else if (key === 'x' || key === '*') {
                 setInputValue('×')
             } else if (key === '+') {
                 setInputValue('+')
@@ -291,13 +331,14 @@ const Calculator: React.FC = ({ children }) => {
                     />
                 </Display>
                 <Grid>
-                    <Button id="clear" onClick={clearValue}>
+                    <Button id="clear" data-testid="clear" onClick={clearValue}>
                         Clear
                     </Button>
                     <Button
                         onClick={() => {
                             setValue(value.concat('÷'))
                         }}
+                        data-testid="/"
                     >
                         /
                     </Button>
@@ -305,6 +346,7 @@ const Calculator: React.FC = ({ children }) => {
                         onClick={() => {
                             setValue(value.concat('×'))
                         }}
+                        data-testid="x"
                     >
                         x
                     </Button>
@@ -333,6 +375,7 @@ const Calculator: React.FC = ({ children }) => {
                         onClick={() => {
                             setValue(value.concat('-'))
                         }}
+                        data-testid="-"
                     >
                         -
                     </Button>
@@ -361,6 +404,7 @@ const Calculator: React.FC = ({ children }) => {
                         onClick={() => {
                             setValue(value.concat('+'))
                         }}
+                        data-testid="+"
                     >
                         +
                     </Button>
@@ -385,7 +429,7 @@ const Calculator: React.FC = ({ children }) => {
                     >
                         3
                     </Button>
-                    <Button id="equals" onClick={calculate}>
+                    <Button id="equals" data-testid="=" onClick={calculate}>
                         {'='}
                     </Button>
                     <Button
@@ -400,11 +444,22 @@ const Calculator: React.FC = ({ children }) => {
                         onClick={() => {
                             setValue(value.concat('.'))
                         }}
+                        data-testid="."
                     >
                         .
                     </Button>
                 </Grid>
             </Frame>
+            <Tooltip>
+                ?
+                <span className="tooltip__text">
+                    You can use your keyboard to calculate expressions. Allowed
+                    inputs are all numerical keys, <code>.</code>,{' '}
+                    <code>/</code>, <code>x</code>, <code>*</code>,{' '}
+                    <code>-</code>, <code>+</code>, <code>{'='}</code>, and{' '}
+                    <code>Esc</code> to clear.
+                </span>
+            </Tooltip>
         </ThemeProvider>
     )
 }
